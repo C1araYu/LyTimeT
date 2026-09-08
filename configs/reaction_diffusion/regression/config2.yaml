@@ -1,0 +1,55 @@
+seed: 2
+log_dir: 'logs'
+model_name: 'refine-sr'
+data_filepath: '/data/physics_prediction_v2/data'
+dataset: 'circular_motion'
+intrinsic_dimension: 2
+niterations: 1000
+batch_size: 1000
+num_frames: 60
+maxsize: 20
+complexity_of_constants: 0.0
+weight_add_node: 2.0
+weight_insert_node: 2.0
+weight_delete_node: 1.0
+weight_do_nothing: 0.2
+weight_mutate_constant: 0.5
+weight_mutate_operator: 0.5
+weight_simplify: 1.0
+weight_randomize: 0.1
+binary_operators: ['+', '*', '-', '/']
+unary_operators: ['sin', 'cos', 'square', 'cube']
+constraints: {
+  'sin': 10,
+  'cos': 10,
+  'square': 10,
+  'cube': 10,
+  '*': [10,10],
+  '/': [10, 10]
+}
+nested_constraints: {
+  'sin': {
+    'sin': 0,
+    'cos': 0,
+    'square': 1,
+    'cube': 1
+  },
+  'cos': {
+    'sin': 0,
+    'cos': 0,
+    'square': 1,
+    'cube': 1
+  },
+  'square': {
+    'sin': 1,
+    'cos': 1,
+    'square': 0,
+    'cube': 0
+  },
+  'cube': {
+    'sin': 1,
+    'cos': 1,
+    'square': 0,
+    'cube': 0
+  }
+}
