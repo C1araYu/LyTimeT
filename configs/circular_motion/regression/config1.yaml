@@ -1,0 +1,30 @@
+seed: 1
+log_dir: '../logs'
+model_name: 'refine-sr'
+data_filepath: '/data/physics_prediction_v2/data'
+dataset: 'circular_motion'
+intrinsic_dimension: 2
+niterations: 200
+batch_size: 1000
+num_frames: 60
+maxsize: 30
+warmup_maxsize_by: 0.2
+complexity_of_constants: 1.0
+complexity_of_variables: 1.0
+binary_operators: ['+', '*', '-']
+unary_operators: ['sin', 'square']
+constraints: {
+  'sin': 5,
+  'square': 5,
+  '*': [5, 5],
+}
+nested_constraints: {
+  'sin': {
+    'sin': 0,
+    'square': 1,
+  },
+  'square': {
+    'sin': 1,
+    'square': 0,
+  },
+}
