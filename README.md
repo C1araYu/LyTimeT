@@ -1,7 +1,7 @@
 # LyTimeT: Towards Robust and Interpretable State-Variable Discovery
 
 ## Overview
-This repo contains the reference implementation for **"LyTimeT: Towards Robust and Interpretable State-Variable Discovery"** by Kuai Yu, Crystal Su, Xiang Liu, Judah Goldfeder, Mingyuan Shao, and Hod Lipson ([arXiv:2510.19716](https://arxiv.org/html/2510.19716v1)).
+This repo contains the reference implementation for **"LyTimeT: Towards Robust and Interpretable State-Variable Discovery"** by Kuai Yu, Crystal Su, Xiang Liu, Judah Goldfeder, Mingyuan Shao, and Hod Lipson ([arXiv:2510.19716](https://arxiv.org/html/2510.19716v1)). We are honored to give ICASSP 2026 Oral Presentation!
 
 LyTimeT is a two-phase framework for extracting robust, interpretable state variables from high-dimensional video of dynamical systems:
 
